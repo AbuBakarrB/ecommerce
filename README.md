@@ -14,3 +14,4 @@ Technologies:
  * Python
  * Django
  * Bootstrap CSS
+ * SQLite
