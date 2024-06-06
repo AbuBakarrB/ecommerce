@@ -22,10 +22,6 @@ class CustomUser(AbstractUser):
         ("buyer", "Buyer"),
         ("seller", "Seller")
         ]
-    user_type = models.CharField(max_length = 10,
-                                 choices = USER_TYPE_CHOICES,
-                                 default = "buyer")
-    
     
     @property
     def is_buyer(self):
