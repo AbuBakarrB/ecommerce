@@ -1,0 +1,11 @@
+{% extends 'commerce/base.html' %}
+
+{% block content %}
+    <h2>Logged out successfully!</h2>
+    <div class="border-top pt-3 mb-3">
+        <small class="text-muted">
+           <a class="primary" href="{% url 'login' %}">Login Again</a>
+        </small>
+
+    </div>
+{% endblock %}

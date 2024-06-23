@@ -1,0 +1,9 @@
+{% extends 'commerce/base.html' %}
+
+{% block content %}
+
+<h2>Confirm logout</h2>
+    <form method="POST" action="{% url 'logout' %}">{% csrf_token %}
+        <button type="submit" class="btn btn-outline-info">Logout</button>
+    </form>
+{% endblock %}

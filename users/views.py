@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from .forms import CustomUserCreationForm
 from django.contrib import messages
 
@@ -11,7 +12,11 @@ def register(request):
             form.save()
             username = form.cleaned_data.get("username")
             messages.success(request, f'Welcome, {username}!')
-            return redirect('home')
+            return redirect('login')
     else:
         form = CustomUserCreationForm()
     return render(request, "users/register.html", {"form":form})
+
+
+def confirm(request):
+    return render(request, "commerce/logout_confirm.html")
